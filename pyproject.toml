@@ -1,0 +1,24 @@
+[project]
+name = "payment-api-assistant"
+version = "0.1.0"
+description = "A documentation assistant for a payment API"
+readme = "README.md"
+authors = [
+    { name = "MSFirsov" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "langchain-text-splitters>=1.2.0",
+]
+
+[project.scripts]
+payment-api-assistant = "payment_api_assistant:main"
+
+[build-system]
+requires = ["uv_build>=0.12.3,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
